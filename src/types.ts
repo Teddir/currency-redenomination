@@ -28,7 +28,7 @@ export interface FormattingOptions {
  * Redenomination rule configuration
  */
 export interface RedenominationRule {
-  /** Name/identifier for this rule (e.g., 'indonesia-2016') */
+  /** Name/identifier for this rule (e.g., 'indonesia-2027') */
   name: string;
   /** Conversion factor: oldAmount * factor = newAmount */
   factor: number;

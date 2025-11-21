@@ -30,7 +30,7 @@ npm install currency-redenomination
 ```typescript
 import { RedenominationEngine, PREDEFINED_RULES } from 'currency-redenomination';
 
-// Create engine with Indonesia 2016 redenomination (remove 3 zeros)
+// Create engine with Indonesia 2027 redenomination (remove 3 zeros)
 const engine = new RedenominationEngine(PREDEFINED_RULES.indonesia2027);
 
 // Convert old currency to new (1000000 → 1000)
@@ -65,12 +65,12 @@ import {
 const engine1 = new RedenominationEngine(PREDEFINED_RULES.indonesia2027);
 
 // Get rule by country code
-const indonesiaRule = getRuleByCountry('ID', 2016);
+const indonesiaRule = getRuleByCountry('ID', 2027);
 const engine2 = new RedenominationEngine(indonesiaRule);
 
 // List all available countries
 const countries = getAvailableCountries();
-// [{ code: 'ID', name: 'Indonesia', years: [2016] }, ...]
+// [{ code: 'ID', name: 'Indonesia', years: [2027] }, ...]
 ```
 
 ### Local Currency Symbols
@@ -464,7 +464,7 @@ interface ConvertOptions {
 - `PREDEFINED_RULES.russia1998` - Russia 1998 (₽, ÷1000)
 - `PREDEFINED_RULES.vietnam1985` - Vietnam 1985 (₫, ÷10, decimals: 0)
 
-All rules also accessible via country code: `PREDEFINED_RULES.id2016`, `PREDEFINED_RULES.tr2005`, etc.
+All rules also accessible via country code: `PREDEFINED_RULES.id2027`, `PREDEFINED_RULES.tr2005`, etc.
 
 ## Use Cases
 
