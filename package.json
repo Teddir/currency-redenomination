@@ -1,0 +1,40 @@
+{
+  "name": "currency-redenomination",
+  "version": "1.0.0",
+  "description": "Clean, flexible engine for currency redenomination, formatting, and batch processing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "currency",
+    "redenomination",
+    "conversion",
+    "formatting",
+    "batch",
+    "accounting",
+    "e-commerce",
+    "financial"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
