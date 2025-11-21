@@ -28,9 +28,12 @@ export {
 // Formatters
 export {
   formatCurrency,
+  formatCurrencyGeneral,
   parseCurrency,
   formatWithSeparator,
   createFormatter,
+  createGeneralFormatter,
+  getCurrencySymbol,
 } from './formatters';
 
 // Batch processing
@@ -40,28 +43,20 @@ export {
   batchConvertObjects,
 } from './batch';
 
-// Predefined rules for common redenominations
-export const PREDEFINED_RULES = {
-  indonesia2016: {
-    name: 'indonesia-2016',
-    factor: 1000,
-    oldCurrency: 'IDR',
-    newCurrency: 'IDR',
-    decimals: 2,
-  },
-  turkey2005: {
-    name: 'turkey-2005',
-    factor: 1000000,
-    oldCurrency: 'TRL',
-    newCurrency: 'TRY',
-    decimals: 2,
-  },
-  zimbabwe2008: {
-    name: 'zimbabwe-2008',
-    factor: 10000000000,
-    oldCurrency: 'ZWD',
-    newCurrency: 'ZWL',
-    decimals: 2,
-  },
-} as const;
+// Predefined rules and country-based rules
+export {
+  PREDEFINED_RULES,
+  getRuleByCountry,
+  getRulesByCountry,
+  getAvailableCountries,
+  addCountryRedenomination,
+  createCountryRule,
+  removeCountryRedenomination,
+  getAllRules,
+  getRulesByCurrency,
+  getRulesByFactor,
+} from './rules';
+
+export type { FormattingOptions } from './types';
+export type { CountryRedenomination } from './rules';
 

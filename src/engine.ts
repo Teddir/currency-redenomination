@@ -7,7 +7,9 @@ import type {
   RedenominationPlugin,
   ConvertOptions,
   ConversionResult,
+  FormattingOptions,
 } from './types';
+import { formatCurrencyGeneral, getCurrencySymbol } from './formatters';
 
 /**
  * Default rounding function
@@ -133,8 +135,17 @@ export class RedenominationEngine {
 
   /**
    * Format amount using plugins or default formatter
+   * @param amount - Amount to format
+   * @param plugins - Additional plugins to apply
+   * @param useGeneralFormat - Use general formatter instead of international
+   * @param overrideOptions - Override formatting options for this call
    */
-  format(amount: number, plugins: RedenominationPlugin[] = []): string {
+  format(
+    amount: number,
+    plugins: RedenominationPlugin[] = [],
+    useGeneralFormat: boolean = false,
+    overrideOptions: Partial<FormattingOptions> = {}
+  ): string {
     // Try plugin formatters first
     for (const plugin of [...this.defaultPlugins, ...plugins]) {
       if (plugin.format) {
@@ -145,12 +156,37 @@ export class RedenominationEngine {
       }
     }
 
-    // Default formatting
+    // Use general formatter if requested and formatting options are available
+    if (useGeneralFormat && this.rule.formatting) {
+      const decimals = this.rule.decimals ?? 2;
+      const currency = getCurrencySymbol(this.rule, true);
+      return formatCurrencyGeneral(amount, {
+        symbol: currency,
+        decimals,
+        ...this.rule.formatting,
+      });
+    }
+
+    // Default formatting (international)
     const decimals = this.rule.decimals ?? 2;
-    const currency = this.rule.newCurrency || '';
-    const formatted = amount.toLocaleString('en-US', {
-      minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals,
+    const currency = getCurrencySymbol(this.rule, true);
+    const locale = this.rule.formatting?.locale || 'en-US';
+    
+    // Check if we should hide decimals
+    const hideDecimals = overrideOptions.hideDecimals ?? this.rule.formatting?.hideDecimals ?? false;
+    const omitDecimals = overrideOptions.omitDecimals ?? this.rule.formatting?.omitDecimals ?? false;
+    const isWholeNumber = amount % 1 === 0;
+    let actualDecimals = decimals;
+    
+    if (omitDecimals) {
+      actualDecimals = 0;
+    } else if (hideDecimals && isWholeNumber) {
+      actualDecimals = 0;
+    }
+    
+    const formatted = amount.toLocaleString(locale, {
+      minimumFractionDigits: actualDecimals,
+      maximumFractionDigits: actualDecimals,
     });
     
     return currency ? `${currency} ${formatted}` : formatted;
