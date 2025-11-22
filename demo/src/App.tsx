@@ -12,6 +12,7 @@ import APIOverview from './components/APIOverview';
 import UseCases from './components/UseCases';
 import Contributing from './components/Contributing';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
 import './App.css';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       animate="visible"
       variants={containerVariants}
     >
+      <SEOHead />
       <Header />
       <Hero indonesiaResult={indonesiaResult.amount} indonesiaFormatted={indonesiaFormatted} />
       <Features />

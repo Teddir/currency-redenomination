@@ -111,7 +111,7 @@ export default function APIOverview() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="api" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 scroll-mt-20 overflow-hidden">
+    <section id="api" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 scroll-mt-20 overflow-hidden" aria-label="API Overview">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"

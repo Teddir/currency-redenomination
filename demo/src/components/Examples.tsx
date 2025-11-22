@@ -31,7 +31,7 @@ export default function Examples({ indonesiaFormatted, turkeyFormatted }: Exampl
   };
 
   return (
-    <section id="examples" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20">
+    <section id="examples" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20" aria-label="Code Examples">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"

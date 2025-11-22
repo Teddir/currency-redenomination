@@ -75,7 +75,7 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="features" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20">
+    <section id="features" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20" aria-label="Key Features">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"
@@ -90,7 +90,7 @@ export default function Features() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <motion.div
+          <motion.header
             className="text-center mb-12 sm:mb-16 md:mb-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function Features() {
             <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Everything you need for currency redenomination and formatting
             </p>
-          </motion.div>
+          </motion.header>
 
           {/* Features Grid */}
           <motion.div

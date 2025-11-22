@@ -35,7 +35,7 @@ export default function QuickStart() {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden" aria-label="Quick Start Guide">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"

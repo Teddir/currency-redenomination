@@ -29,7 +29,7 @@ export default function Contributing() {
   };
 
   return (
-    <section id="contributing" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden scroll-mt-20">
+    <section id="contributing" className="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden scroll-mt-20" aria-label="Contributing Guide">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"

@@ -28,46 +28,59 @@ function Header() {
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm  border-slate-200 dark:border-slate-700'
           : 'bg-transparent'
       }`}
+      role="banner"
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-4" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <a
-              href="#"
+              href="/"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="font-bold capitalize font-mono"
+              aria-label="Currency Redenomination - Home"
             >
-              currency redenomination
+              <img 
+                src="/vite.svg" 
+                alt="Currency Redenomination Logo - TypeScript library for currency conversion and formatting" 
+                className="w-10 h-10"
+                width="40"
+                height="40"
+                loading="eager"
+              />
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8" role="menubar">
             <button
               onClick={() => scrollToSection('features')}
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors font-medium"
+              aria-label="Navigate to Features section"
             >
               Features
             </button>
             <button
               onClick={() => scrollToSection('examples')}
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors font-medium"
+              aria-label="Navigate to Examples section"
             >
               Examples
             </button>
             <button
               onClick={() => scrollToSection('api')}
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors font-medium"
+              aria-label="Navigate to API Overview section"
             >
               API
             </button>
             <button
               onClick={() => scrollToSection('use-cases')}
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors font-medium"
+              aria-label="Navigate to Use Cases section"
             >
               Use Cases
             </button>

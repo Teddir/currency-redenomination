@@ -42,7 +42,7 @@ export default function Hero({ indonesiaResult, indonesiaFormatted }: HeroProps)
   };
 
   return (
-    <section id="hero" className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden" aria-label="Hero section">
       {/* Animated Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"

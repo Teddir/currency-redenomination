@@ -55,7 +55,7 @@ export default function UseCases() {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="use-cases" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20">
+    <section id="use-cases" className="relative py-16 sm:py-20 md:py-24 lg:py-28 scroll-mt-20" aria-label="Use Cases">
       {/* Background decoration */}
       <motion.div
         className="absolute inset-0 -z-10"
