@@ -17,3 +17,15 @@ html {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
 }
+
+/* Enhanced color palette */
+:root {
+  --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f97316 100%);
+  --gradient-warm: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #3b82f6 100%);
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}

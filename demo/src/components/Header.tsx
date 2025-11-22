@@ -25,7 +25,7 @@ function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm border-b border-slate-200 dark:border-slate-700'
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm  border-slate-200 dark:border-slate-700'
           : 'bg-transparent'
       }`}
     >
@@ -73,7 +73,7 @@ function Header() {
             </button>
             <div className="h-6 w-px bg-slate-300 dark:bg-slate-600" />
             <a
-              href="https://github.com"
+              href="https://github.com/Teddir/currency-redenomination"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
@@ -179,7 +179,7 @@ function Header() {
               <div className="h-px bg-slate-200 dark:bg-slate-700" />
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Teddir/currency-redenomination"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
