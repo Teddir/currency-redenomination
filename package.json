@@ -1,6 +1,6 @@
 {
   "name": "currency-redenomination",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Clean, flexible engine for currency redenomination, formatting, and batch processing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,8 +21,16 @@
     "e-commerce",
     "financial"
   ],
-  "author": "",
+  "author": "teddir",
   "license": "MIT",
+  "homepage": "https://github.com/teddir/currency-redenomination#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teddir/currency-redenomination.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teddir/currency-redenomination/issues"
+  },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "jest": "^30.2.0",
@@ -34,10 +42,6 @@
     "README.md",
     "LICENSE"
   ],
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "engines": {
     "node": ">=14.0.0"
   }
