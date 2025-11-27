@@ -1,6 +1,6 @@
 {
   "name": "currency-redenomination",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Clean, flexible engine for currency redenomination, formatting, and batch processing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,7 @@
   ],
   "author": "teddir",
   "license": "MIT",
-  "homepage": "https://github.com/teddir/currency-redenomination#readme",
+  "homepage": "https://currency-redenomination.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/teddir/currency-redenomination.git"
